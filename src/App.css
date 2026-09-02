@@ -1,3 +1,67 @@
+.app-shell {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+
+.page-title {
+  margin: 0 0 1.5rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+}
+
+.vacancy-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+  padding: 1.5rem;
+}
+
+.vacancy-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--tex);
+}
+
+.vacancy-description {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: black;
+}
+
+.vacancy-meta {
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+  color: #475569;
+}
+
+.vacancy-button {
+  margin-top: 1.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.vacancy-button:hover {
+  background: #1d4ed8;
+}
+
+.vacancy-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
