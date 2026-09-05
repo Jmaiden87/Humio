@@ -1,0 +1,58 @@
+import type { Vacancy } from '../types'
+
+export const vacancies: Vacancy[] = [
+  {
+    id: 1,
+    title: 'Frontend Developer',
+    department: 'Technology',
+    modality: 'Remote',
+    location: 'Madrid',
+    image: '/images/vacancies/frontend-developer.jpg',
+    description: 'Build accessible and performant interfaces for our candidate platform.',
+  },
+  {
+    id: 2,
+    title: 'Product Designer',
+    department: 'Design',
+    modality: 'Hybrid',
+    location: 'Barcelona',
+    image: '/images/vacancies/product-designer.jpg',
+    description: 'Create intuitive experiences that help teams hire exceptional talent.',
+  },
+  {
+    id: 3,
+    title: 'Backend Engineer',
+    department: 'Technology',
+    modality: 'Remote',
+    location: 'Valencia',
+    image: '/images/vacancies/backend-engineer.jpg',
+    description: 'Design reliable services and APIs that power our recruitment workflows.',
+  },
+  {
+    id: 4,
+    title: 'Talent Acquisition Specialist',
+    department: 'Human Resources',
+    modality: 'On-site',
+    location: 'Seville',
+    image: '/images/vacancies/talent-acquisition-specialist.jpg',
+    description: 'Connect outstanding candidates with opportunities where they can thrive.',
+  },
+  {
+    id: 5,
+    title: 'Data Analyst',
+    department: 'Analytics',
+    modality: 'Hybrid',
+    location: 'Bilbao',
+    image: '/images/vacancies/data-analyst.jpg',
+    description: 'Turn hiring data into insights that improve recruitment decisions.',
+  },
+  {
+    id: 6,
+    title: 'AI Engineer',
+    department: 'Research and Development',
+    modality: 'Remote',
+    location: 'Malaga',
+    image: '/images/vacancies/ai-engineer.jpg',
+    description: 'Develop responsible AI features for smarter candidate evaluation.',
+  },
+]
