@@ -12,8 +12,8 @@
 }
 
 .vacancy-card {
-  background: #fff;
-  border: 1px solid var(--border);
+  background: #ffffff;
+  border: 1px solid #e9ecef;
   border-radius: 1rem;
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
   padding: 1.5rem;
@@ -23,14 +23,14 @@
   margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--tex);
+  color: #212529;
 }
 
 .vacancy-summary {
   display: -webkit-box;
   margin: 0.5rem 0 0;
   overflow: hidden;
-  color: #475569;
+  color: #6c757d;
   font-size: 0.875rem;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -47,14 +47,14 @@
   margin: 1rem 0 0;
   display: grid;
   gap: 0.5rem;
-  color: #475569;
+  color: #6c757d;
 }
 
 .vacancy-button {
   margin-top: 1.5rem;
   border: 0;
   border-radius: 0.5rem;
-  background: var(--primary);
+  background: #4ea8de;
   color: #fff;
   padding: 0.75rem 1rem;
   font: inherit;
@@ -64,7 +64,7 @@
 }
 
 .vacancy-button:hover {
-  background: #1d4ed8;
+  background: #3d96cb;
 }
 
 .vacancy-button:focus-visible {
