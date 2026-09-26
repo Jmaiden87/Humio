@@ -1,4 +1,5 @@
 import type { VacancyFormData } from '@/shared/types'
+import { createVacancy } from '@/shared/api/vacancies'
 import { VacancyForm } from '../components/VacancyForm'
 
 type Props = {
@@ -6,8 +7,8 @@ type Props = {
 }
 
 export function CreateVacancyPage({ onBack }: Props) {
-  const handleSubmit = (vacancy: VacancyFormData) => {
-    console.log('Vacancy created:', vacancy)
+  const handleSubmit = async (vacancy: VacancyFormData) => {
+    await createVacancy(vacancy)
   }
 
   return (

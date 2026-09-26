@@ -10,6 +10,8 @@ export type Vacancy = {
 
 export type VacancyStatus = 'Activa' | 'Cerrada' | 'En evaluación'
 export type VacancyModality = 'remoto' | 'presencial' | 'hibrido'
+export type VacancyCategory = 'junior' | 'semi-senior' | 'senior'
+export type VacancyContractType = 'full-time' | 'part-time'
 
 export type VacancyFormData = {
   title: string
@@ -17,6 +19,8 @@ export type VacancyFormData = {
   department: string
   modality: VacancyModality | ''
   location: string
+  category: VacancyCategory | ''
+  contractType: VacancyContractType | ''
   requiredSkills: string[]
   optionalSkills: string[]
   experienceMin: number

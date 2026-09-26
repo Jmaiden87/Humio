@@ -16,6 +16,8 @@ describe('VacancyForm', () => {
     await user.type(screen.getByLabelText(/departamento/i), 'Technology')
     await user.selectOptions(screen.getByLabelText(/modalidad/i), 'remoto')
     await user.type(screen.getByLabelText(/ubicación/i), 'Madrid')
+    await user.selectOptions(screen.getByLabelText(/categoría/i), 'senior')
+    await user.selectOptions(screen.getByLabelText(/tipo de contrato/i), 'full-time')
     await user.type(screen.getByLabelText(/habilidades obligatorias/i), 'React, TypeScript')
     await user.type(screen.getByLabelText(/años mínimos/i), '2')
     await user.type(screen.getByLabelText(/nivel educativo/i), 'Computer Science')
@@ -37,6 +39,8 @@ describe('VacancyForm', () => {
     await user.type(screen.getByLabelText(/departamento/i), 'Technology')
     await user.selectOptions(screen.getByLabelText(/modalidad/i), 'hibrido')
     await user.type(screen.getByLabelText(/ubicación/i), 'Barcelona')
+    await user.selectOptions(screen.getByLabelText(/categoría/i), 'semi-senior')
+    await user.selectOptions(screen.getByLabelText(/tipo de contrato/i), 'part-time')
     await user.type(screen.getByLabelText(/habilidades obligatorias/i), 'Node.js')
     await user.type(screen.getByLabelText(/años mínimos/i), '3')
     await user.type(screen.getByLabelText(/nivel educativo/i), 'Engineering')
@@ -49,6 +53,8 @@ describe('VacancyForm', () => {
       expect.objectContaining({
         title: 'Backend Engineer',
         modality: 'hibrido',
+        category: 'semi-senior',
+        contractType: 'part-time',
         requiredSkills: ['Node.js'],
         experienceMin: 3,
         createdAt: expect.any(String),

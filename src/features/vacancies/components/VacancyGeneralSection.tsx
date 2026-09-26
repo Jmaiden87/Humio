@@ -1,4 +1,4 @@
-import type { VacancyModality } from '@/shared/types'
+import type { VacancyCategory, VacancyContractType, VacancyModality } from '@/shared/types'
 
 type Props = {
   values: {
@@ -7,6 +7,8 @@ type Props = {
     department: string
     modality: VacancyModality | ''
     location: string
+    category: VacancyCategory | ''
+    contractType: VacancyContractType | ''
   }
   onChange: (field: keyof Props['values'], value: string) => void
 }
@@ -42,6 +44,25 @@ export function VacancyGeneralSection({ values, onChange }: Props) {
         Ubicación
         <input required value={values.location} onChange={(event) => onChange('location', event.target.value)} className="mt-1 w-full rounded-md border border-slate-300 p-2" />
       </label>
+      <div className="grid gap-4 md:grid-cols-2">
+        <label className="block text-sm font-medium text-slate-700">
+          Categoría
+          <select required value={values.category} onChange={(event) => onChange('category', event.target.value)} className="mt-1 w-full rounded-md border border-slate-300 bg-white p-2">
+            <option value="">Selecciona una categoría</option>
+            <option value="junior">Junior</option>
+            <option value="semi-senior">Semi-senior</option>
+            <option value="senior">Senior</option>
+          </select>
+        </label>
+        <label className="block text-sm font-medium text-slate-700">
+          Tipo de contrato
+          <select required value={values.contractType} onChange={(event) => onChange('contractType', event.target.value)} className="mt-1 w-full rounded-md border border-slate-300 bg-white p-2">
+            <option value="">Selecciona un tipo de contrato</option>
+            <option value="full-time">Full-time</option>
+            <option value="part-time">Part-time</option>
+          </select>
+        </label>
+      </div>
     </fieldset>
   )
 }

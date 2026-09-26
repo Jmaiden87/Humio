@@ -10,7 +10,12 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "backend:dev": "uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000",
+    "backend:test": "pytest backend/test",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f postgres"
   },
   "dependencies": {
     "react": "^19.2.8",

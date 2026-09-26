@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: humio-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: humio
+      POSTGRES_USER: humio
+      POSTGRES_PASSWORD: humio
+    ports:
+      - "5432:5432"
+    volumes:
+      - humio-postgres-data:/var/lib/postgresql/data
+      - ./backend/sql:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U humio -d humio"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  humio-postgres-data:

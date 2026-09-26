@@ -15,6 +15,8 @@ const initialValues = {
   department: '',
   modality: '' as const,
   location: '',
+  category: '' as const,
+  contractType: '' as const,
   requiredSkills: '',
   optionalSkills: '',
   experienceMin: '',
@@ -35,6 +37,8 @@ export function VacancyForm({ onSubmit }: Props) {
     values.department.trim() &&
     values.modality &&
     values.location.trim() &&
+    values.category &&
+    values.contractType &&
     splitList(values.requiredSkills).length > 0 &&
     Number(values.experienceMin) >= 0 &&
     values.educationLevel.trim() &&
@@ -59,6 +63,8 @@ export function VacancyForm({ onSubmit }: Props) {
       department: values.department.trim(),
       modality: values.modality,
       location: values.location.trim(),
+      category: values.category,
+      contractType: values.contractType,
       requiredSkills: splitList(values.requiredSkills),
       optionalSkills: splitList(values.optionalSkills),
       experienceMin: Number(values.experienceMin),
